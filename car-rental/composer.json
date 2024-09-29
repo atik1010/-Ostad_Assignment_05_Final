@@ -1,0 +1,46 @@
+{
+    "name": "your-vendor/car-rental",
+    "description": "A Car Rental Web Application built with Laravel.",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "laravel/framework": "^10.0",
+        "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.3", // For authentication scaffolding
+        "laravel/passport": "^10.0", // For API authentication, if needed
+        "maatwebsite/excel": "^3.1" // For exporting/importing data (optional)
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.4",
+        "nunomaduro/collision": "^5.0" // For error handling in development
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "php artisan package:discover --ansi"
+        ],
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+    ]
+}
